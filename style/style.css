@@ -1,3 +1,25 @@
-h1{
-    background-color: pink;
+.chatBox{
+    background-color: tan;
+}
+
+/* chatBox section END */
+
+/*queenClicker START*/
+.queenClicker{
+    background-color: royalblue;
+}
+
+/* queenClicker END*/
+
+/*beeStore START*/
+.beeStore{
+    background-color: greenyellow;
+}
+
+/*beeStore END*/
+
+/*gameReset START*/
+
+.gameReset{
+    color: red;
 }
