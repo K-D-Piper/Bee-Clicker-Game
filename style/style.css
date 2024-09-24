@@ -1,7 +1,39 @@
+/*all-In-One/ whole background changes START*/
+.all-In-One{
+    background-image: url(../images/beeHive\ Background.jpg);
+}
+
+/*all-In-One END*/
+/* chatBox START */ 
 .chatBox{
     background-color: tan;
 }
 
+.totalCounter ul li{
+    list-style-type: none;
+    display: inline-block;
+
+}
+#totalBees{
+    background-image: url(../images/BeeHive\ picture.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width:20%;
+}
+
+#totalPollen{
+    background-image: url(../images/flowers.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 20%;
+}
+
+#totalHoney{
+    background-image: url(../images/honey.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 20%;
+}
 /* chatBox section END */
 
 /*queenClicker START*/
@@ -16,6 +48,31 @@
     background-color: greenyellow;
 }
 
+.beeStore ul li{
+    list-style-type: none;
+    display: inline-block;
+}
+
+#beeAvaliable{
+    background-image: url(../images/Bee\ avaliable\ .jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 20%;
+}
+
+#beePollen{
+    background-image: url(../images/Bees\ getting\ pollen.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 20%;
+}
+
+#beeHoney{
+    background-image: url(../images/Bees\ making\ honey.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 20%;
+}
 /*beeStore END*/
 
 /*gameReset START*/
