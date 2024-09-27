@@ -9,11 +9,16 @@
     background-color: tan;
 }
 
+.buzzBee{
+    width: 23%;
+}
+
 .totalCounter ul li{
     list-style-type: none;
     display: inline-block;
-
+    padding-inline:16%;
 }
+
 #totalBees{
     background-image: url(../images/BeeHive\ picture.jpg);
     background-size: contain;
@@ -50,7 +55,7 @@
 
 .beeStore ul li{
     list-style-type: none;
-    display: inline-block;
+    /*display: inline-block;*/
 }
 
 /*
