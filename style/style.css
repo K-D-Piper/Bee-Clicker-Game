@@ -23,6 +23,7 @@
     padding-inline:16%;
 }
 
+
 #totalBees{
     background-image: url(../images/BeeHive\ picture.jpg);
     background-size: contain;
@@ -62,7 +63,7 @@
     /*display: inline-block;*/
 }
 
-
+/*
 #beeAvaliable{
     background-image: url(../images/Bee\ avaliable\ .jpg);
     background-size: contain;
@@ -83,7 +84,7 @@
     background-repeat: no-repeat;
     width: 20%;
 }
-
+*/
 
 
 /*beeStore END*/
