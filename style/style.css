@@ -9,6 +9,10 @@
     background-color: tan;
 }
 
+.chatBox p{
+    background-color: white;
+}
+
 .buzzBee{
     width: 23%;
 }
@@ -58,7 +62,7 @@
     /*display: inline-block;*/
 }
 
-/*
+
 #beeAvaliable{
     background-image: url(../images/Bee\ avaliable\ .jpg);
     background-size: contain;
@@ -80,7 +84,7 @@
     width: 20%;
 }
 
-*/
+
 
 /*beeStore END*/
 
