@@ -15,9 +15,15 @@
                     <div class="row">
                         <div class="totalCounter">
                             <ul>
-                                <li id="totalBees"><p>BEES TOTAL</p></li>
-                                <li id="totalPollen"><p>POLLEN TOTAL</p></li>
-                                <li id="totalHoney"><p>HONEY TOTAL</p></li>
+                                <li id="totalBees">
+                                    <p id="totalDisplay"></p>
+                                </li>
+                                <li id="totalPollen">
+                                    <p>POLLEN TOTAL</p>
+                                </li>
+                                <li id="totalHoney">
+                                    <p>HONEY TOTAL</p>
+                                </li>
                             </ul>
                             <div class="explainerBee col-12">
                                 <p>exBEEsition goes here</p>    
@@ -32,12 +38,16 @@
                     <div class="row">
                         <div class="queenClicker">
                             <p>MY QUEEN</p> 
-                            <button><img class="img-fluid" src="images/queenBee.jpg" alt="This is you, My Queen. Image of Queen Bee, i.e. a bee with a golden crown"></button>
+                            <button id="clickQueen"><img class="img-fluid" src="images/queenBee.jpg" alt="This is you, My Queen. Image of Queen Bee, i.e. a bee with a golden crown"></button>
                         </div> <!-- queenClicker END-->
                         <div class="beeStore">
                             <h5>Bee Store</h5>
                             <ul>
-                                <li ><h6>AVAILABLE : <p id="beeAvaliable"> 50</p> </h6></li>
+                                <li id="beesAvaliable">
+                                    <h6>AVAILABLE : 
+                                        <span id="avaliableDisplay"></span>
+                                    </h6>
+                                </li>
                                 <li id="beePollen"><h6>POLLENATING : </h6><p>50</p><button>ORDER</button></li>
                                 <li id="beeHoney"><h6>HONEYING : </h6><p>50</p><button>ORDER</button></li>
                             </ul>
