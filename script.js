@@ -1,74 +1,85 @@
 //Total Bee Count START
-
 let count = 0; //this is starting count 
 let queenButton = document.getElementById("clickQueen") //The Queen Button
+let totalBees = document.getElementById("totalDisplay") //Total Bees post clicks
+//Total Bee Count END
 
-//TopTotals
-let totalBees = document.getElementById("totalDisplay")
-let totalPollen = document.getElementById("pollenDisplay")
-let totalHoney = document.getElementById("honeyDisplay")
-//Total Bee Count END (also has avilableBees count)
-
-//Store Count START
-let beesAvaliable = document.getElementById("avaliableDisplay")
-let getPollenDisplay = document.getElementById("displayGetPollen")
-let getPollenButton = document.getElementById("orderGetPollen")
-//Store Count END
-
-//My Queen START
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//MY QUEEN (the everything Button) START
 queenButton.addEventListener('click', () => 
     { //Event Listener START
+
         count+= 1; //What Counts It / what makes the numbers go up
-
-        //Top Totals DISPLAYS START
         totalBees.innerHTML = count //Total Bees 
-        totalPollen.innerHTML =Math.floor(count / 5) //Total Pollen
-        /* Note: Total Pollen reliant on POLLENATING bees. Not Total Bees*/
-        totalHoney.innerHTML = Math.floor(count / 10) //Total Honey
-        /* Note: Total Honey reliant on HONEYING bees. Not Total Bees.*/
 
-        //Top Totals DISPLAYS END
-
-        //BeeStore START
-        beesAvaliable.innerHTML = count //Is the total of Bees
-        /* Note:
-        Available needs to be: Bees - (NumberOfBeesGettingPollen + NumberOfBeesGettingHoney)
-        */
-
-        /* 
-        Pollen Equation:
-            It takes 5 bees to get 1 pollen. 
-            When you send out your 5 bees, you now have 5 less bees avaliabled in your hive. 
-            5 Bees = 1 Pollen 
-            5x = 1y 
-        */
-
-        //Pollen Count START
-        //previous attempt commented out
-        //getPollenDisplay.innerHTML = Math.floor(beesAvaliable.innerHTML / 5)
-        //beesAvaliable.innerHTML / getPollenDisplay.innerHTML
-
-        getPollenDisplay = beesAvaliable * 5 //5 bees = 1 pollen
-
-        getPollenDisplay.innerHTML = (beesAvaliable.innerHTML * 5) //5 Bees = 1 Pollen
-        //above reads pollen  = bees * 5 
-        //There are currently 5 bees pollenating. 
-
-        
-
-        //Pollen Count END
-
-
-        //BeeStore END
-
-
-
-
-
-
-
+        //Bees Avaliable START
+            /* Note:
+                Available needs to be: Bees - (NumberOfBeesGettingPollen + NumberOfBeesGettingHoney)
+            */  
+        beesAvaliable.innerHTML = totalBees.innerHTML //Is the total of Bees
+        //Bees Avaliable END
 
     })//EventListener END (DO NOT TOUCH)
-//My Queen END
-console.log(queenButton)
+//MY QUEEN END (the everything button) END
+console.log(queenButton) //i don't think i need this?
+console.log(totalBees) //total bees/ times clicked
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+//Total Pollen Count START
+let totalPollen = document.getElementById("pollenDisplay")
+
+totalPollen.innerHTML =Math.floor(count / 5) //Total Pollen
+/* Note: Total Pollen reliant on POLLENATING bees. Not Total Bees*/
+//Total Pollen Count END
+
+//Top Totals NAMING START
+let totalHoney = document.getElementById("honeyDisplay")
+//Top Totals NAMING END
+//TOP TOTALS MATH START 
+        totalHoney.innerHTML = Math.floor(count / 10) //Total Honey
+        /* Note: Total Honey reliant on HONEYING bees. Not Total Bees.*/
+//TOP TOTALS MATH END
+
+
+//BeeStore START =======================================================
+
+//Bees Avaliable START
+let beesAvaliable = document.getElementById("avaliableDisplay")
+
+//Bees Avaliable END
+
+//Pollen
+let getPollenDisplay = document.getElementById("beesPollenating")
+let getPollenButton = document.getElementById("orderGetPollen")
+
+
+
+
+ /* 
+ Pollen Equation:
+     It takes 5 bees to get 1 pollen. 
+     When you send out your 5 bees, you now have 5 less bees avaliabled in your hive. 
+     5 Bees = 1 Pollen 
+     5x = 1y 
+ */
+
+ //Pollen Count START
+ //previous attempt commented out
+ //getPollenDisplay.innerHTML = Math.floor(beesAvaliable.innerHTML / 5)
+ //beesAvaliable.innerHTML / getPollenDisplay.innerHTML
+
+ getPollenDisplay = beesAvaliable * 5 //5 bees = 1 pollen
+ getPollenDisplay.innerHTML = (beesAvaliable.innerHTML * 5) //5 Bees = 1 Pollen
+ //above reads pollen  = bees * 5 
+ //There are currently 5 bees pollenating. 
+
+ //Pollen Count END
+
+ //BeeStore END
+
+
+
+
 
