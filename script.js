@@ -8,31 +8,15 @@ let totalBees = document.getElementById("totalDisplay") //Total Bees post clicks
 //MY QUEEN (the everything Button) START
 queenButton.addEventListener('click', () => 
     { //Event Listener START
-
         count+= 1; //What Counts It / what makes the numbers go up
         totalBees.innerHTML = count //Total Bees 
 
-        //Bees Avaliable START
-            /* Note:
-                Available needs to be: Bees - (NumberOfBeesGettingPollen + NumberOfBeesGettingHoney)
-            */  
-        beesAvaliable.innerHTML = totalBees.innerHTML //Is the total of Bees
-        //Bees Avaliable END
-
     })//EventListener END (DO NOT TOUCH)
-//MY QUEEN END (the everything button) END
-console.log(queenButton) //i don't think i need this?
-console.log(totalBees) //total bees/ times clicked
+//MY QUEEN (the everything button) END
+console.log(queenButton.innerHTML) //i don't think i need this?
+console.log(totalBees.innerHTML) //total bees/ times clicked
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-
-
-//Total Pollen Count START
-let totalPollen = document.getElementById("pollenDisplay")
-
-totalPollen.innerHTML =Math.floor(count / 5) //Total Pollen
-/* Note: Total Pollen reliant on POLLENATING bees. Not Total Bees*/
-//Total Pollen Count END
 
 //Top Totals NAMING START
 let totalHoney = document.getElementById("honeyDisplay")
@@ -47,15 +31,23 @@ let totalHoney = document.getElementById("honeyDisplay")
 
 //Bees Avaliable START
 let beesAvaliable = document.getElementById("avaliableDisplay")
+/* Note:
+Available needs to be: Bees - (NumberOfBeesGettingPollen + NumberOfBeesGettingHoney)
+*/  
+beesAvaliable.innerHTML = totalBees.innerHTML //Is the total of Bees
 
 //Bees Avaliable END
 
 //Pollen
-let getPollenDisplay = document.getElementById("beesPollenating")
 let getPollenButton = document.getElementById("orderGetPollen")
+let getPollenDisplay = document.getElementById("beesPollenating")
 
+//Total Pollen Count START
+let totalPollen = document.getElementById("pollenDisplay")
 
-
+totalPollen.innerHTML =Math.floor(count / 5) //Total Pollen
+/* Note: Total Pollen reliant on POLLENATING bees. Not Total Bees*/
+//Total Pollen Count END
 
  /* 
  Pollen Equation:
@@ -78,8 +70,3 @@ let getPollenButton = document.getElementById("orderGetPollen")
  //Pollen Count END
 
  //BeeStore END
-
-
-
-
-
