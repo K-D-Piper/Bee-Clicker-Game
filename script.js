@@ -1,8 +1,37 @@
-//Total Bee Count START
+// Variable Names: Total Bee Count START
 let count = 0; //this is starting count 
 let queenButton = document.getElementById("clickQueen") //The Queen Button
 let totalBees = document.getElementById("totalDisplay") //Total Bees post clicks
 //Total Bee Count END
+
+//Variable Names : Bee Store START
+//Bees Avaliable Count START
+let avaliableCount = 0;
+let beesAvaliable = document.getElementById("avaliableDisplay")
+//Bees Avaliable Count END 
+
+//Pollen START 
+    //top total 
+let pollenCount = 0
+let totalPollen = document.getElementById("pollenDisplay")
+
+    //store
+let pollenBeeCount = 0
+let getPollenButton = document.getElementById("orderGetPollen")
+let getPollenDisplay = document.getElementById("beesPollenating")
+//Pollen END
+
+//Honey START
+    //Top Totals
+let honeyCount = 0;
+let totalHoney = document.getElementById("honeyDisplay")
+
+    //store
+let honeyBeeCount = 0;
+let makeHoneyButton = document.getElementById("orderMakeHoney")
+let makeHoneyDisplay = document.getElementById("beesHoneying")
+//Honey END
+//Bee Store Names END
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //MY QUEEN (the everything Button) START
@@ -11,62 +40,45 @@ queenButton.addEventListener('click', () =>
         count+= 1; //What Counts It / what makes the numbers go up
         totalBees.innerHTML = count //Total Bees 
 
-    })//EventListener END (DO NOT TOUCH)
+        avaliableCount += 1 //need fix
+        beesAvaliable.innerHTML = avaliableCount //Is the total of Bees made / avaliable
+    })//EvrentListener END (DO NOT TOUCH)
 //MY QUEEN (the everything button) END
-console.log(queenButton.innerHTML) //i don't think i need this?
-console.log(totalBees.innerHTML) //total bees/ times clicked
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+//BeeStore START ==========================================
 
-//Top Totals NAMING START
-let totalHoney = document.getElementById("honeyDisplay")
-//Top Totals NAMING END
-//TOP TOTALS MATH START 
-        totalHoney.innerHTML = Math.floor(count / 10) //Total Honey
-        /* Note: Total Honey reliant on HONEYING bees. Not Total Bees.*/
-//TOP TOTALS MATH END
+//Get Pollen event listener START ++++++++++++++++++++
+getPollenButton.addEventListener('click', () => 
+    {  
+    //beesAvaliable.innerHTML //calls beesavaliable  (might not need)
+    let numBeesAval = Number(beesAvaliable.innerHTML) //turns this into a number
+    let availResult = numBeesAval - 5  //bees avaliable with subtraction 
+    beesAvaliable.innerHTML = availResult //subtracts
+    console.log(availResult)
 
+    pollenBeeCount += 5; //What Counts It / what makes the numbers go up
+    getPollenDisplay.innerHTML = pollenBeeCount //Total Bees 
 
-//BeeStore START =======================================================
+    pollenCount += 1
+    totalPollen.innerHTML = pollenCount
 
-//Bees Avaliable START
-let beesAvaliable = document.getElementById("avaliableDisplay")
-/* Note:
-Available needs to be: Bees - (NumberOfBeesGettingPollen + NumberOfBeesGettingHoney)
-*/  
-beesAvaliable.innerHTML = totalBees.innerHTML //Is the total of Bees
+}) //GetPollen Event Listener END ++++++++++++++++++
 
-//Bees Avaliable END
+//Make Honey event listener START *******************************************
+makeHoneyButton.addEventListener('click', () => 
+    {  
+    beesAvaliable.innerHTML //calls beesavaliable  (might not need)
+    let numBeesAval = Number(beesAvaliable.innerHTML) //turns this into a number
+    let availResult = numBeesAval - 10  //bees avaliable with subtraction 
+    beesAvaliable.innerHTML = availResult //subtracts
+    console.log(availResult)
 
-//Pollen
-let getPollenButton = document.getElementById("orderGetPollen")
-let getPollenDisplay = document.getElementById("beesPollenating")
+    honeyBeeCount += 10; //What Counts It / what makes the numbers go up
+    makeHoneyDisplay.innerHTML = honeyBeeCount //Total Bees 
 
-//Total Pollen Count START
-let totalPollen = document.getElementById("pollenDisplay")
+    honeyCount += 1
+    totalHoney.innerHTML = honeyCount
 
-totalPollen.innerHTML =Math.floor(count / 5) //Total Pollen
-/* Note: Total Pollen reliant on POLLENATING bees. Not Total Bees*/
-//Total Pollen Count END
-
- /* 
- Pollen Equation:
-     It takes 5 bees to get 1 pollen. 
-     When you send out your 5 bees, you now have 5 less bees avaliabled in your hive. 
-     5 Bees = 1 Pollen 
-     5x = 1y 
- */
-
- //Pollen Count START
- //previous attempt commented out
- //getPollenDisplay.innerHTML = Math.floor(beesAvaliable.innerHTML / 5)
- //beesAvaliable.innerHTML / getPollenDisplay.innerHTML
-
- getPollenDisplay = beesAvaliable * 5 //5 bees = 1 pollen
- getPollenDisplay.innerHTML = (beesAvaliable.innerHTML * 5) //5 Bees = 1 Pollen
- //above reads pollen  = bees * 5 
- //There are currently 5 bees pollenating. 
-
- //Pollen Count END
-
+}) //Make Honey Event Listener END**********************
  //BeeStore END
