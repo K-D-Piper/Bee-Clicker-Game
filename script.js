@@ -51,7 +51,8 @@ queenButton.addEventListener('click', () =>
 //Get Pollen event listener START ++++++++++++++++++++
 getPollenButton.addEventListener('click', () => 
     {  
-    //beesAvaliable.innerHTML //calls beesavaliable  (might not need)
+        if (beesAvaliable.innerHTML >= 5) {
+            //beesAvaliable.innerHTML //calls beesavaliable  (might not need)
     let numBeesAval = Number(beesAvaliable.innerHTML) //turns this into a number
     let availResult = numBeesAval - 5  //bees avaliable with subtraction 
     beesAvaliable.innerHTML = availResult //subtracts
@@ -62,23 +63,38 @@ getPollenButton.addEventListener('click', () =>
 
     pollenCount += 1
     totalPollen.innerHTML = pollenCount
+        }else{
+            alert("You need more Bees, My Queen!")
+        }    
 
 }) //GetPollen Event Listener END ++++++++++++++++++
 
 //Make Honey event listener START *******************************************
 makeHoneyButton.addEventListener('click', () => 
     {  
+        if (beesAvaliable.innerHTML >= 10 && totalPollen.innerHTML >= 1) {
     beesAvaliable.innerHTML //calls beesavaliable  (might not need)
     let numBeesAval = Number(beesAvaliable.innerHTML) //turns this into a number
-    let availResult = numBeesAval - 10  //bees avaliable with subtraction 
+    let availResult = (numBeesAval - 10) //bees avaliable with subtraction 
     beesAvaliable.innerHTML = availResult //subtracts
     console.log(availResult)
+
+    getPollenDisplay.innerHTML = pollenBeeCount //Total Bees 
+
+    pollenCount -= 1
+    totalPollen.innerHTML = pollenCount
 
     honeyBeeCount += 10; //What Counts It / what makes the numbers go up
     makeHoneyDisplay.innerHTML = honeyBeeCount //Total Bees 
 
     honeyCount += 1
     totalHoney.innerHTML = honeyCount
+        }else if (beesAvaliable.innerHTML < 10){
+            alert("You need more Bees, My Queen!")
+        } else if (totalPollen.innerHTML < 1){
+            alert("You need more Pollen, My Queen!")
+        }
+
 
 }) //Make Honey Event Listener END**********************
  //BeeStore END
