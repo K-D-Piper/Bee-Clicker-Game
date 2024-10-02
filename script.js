@@ -98,3 +98,14 @@ makeHoneyButton.addEventListener('click', () =>
 
 }) //Make Honey Event Listener END**********************
  //BeeStore END
+
+ /* MAIN SECTION END*/
+ /*BOSS SECTION START*/
+
+let hiveHealthBar = document.getElementById("hiveHealthBar") //health scale
+let bossHiveButton = document.getElementById("hiveDefense") //hive button 
+
+let bunnyBossBar = document.getElementById("bunnyHealthBar") //bunny health bar
+let honeyBunnyButton = document.getElementById("honeyBoss") //Honey Bunny Button 
+
+

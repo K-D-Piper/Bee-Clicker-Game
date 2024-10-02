@@ -94,3 +94,17 @@
 .gameReset{
     color: red;
 }
+
+/*-----------------------------------------------*/
+/* Honey Bunny Section START*/
+.all-In-One-Boss{
+    background-color: green;
+}
+
+#hiveDefense{
+    width: 20%;
+}
+
+#honeyBoss{
+    width: 20%;
+}
