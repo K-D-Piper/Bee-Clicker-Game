@@ -11,10 +11,16 @@
 
 .chatBox p{
     background-color: white;
+    text-align: center;
+    border-radius: 37%;
+    margin-left: 13%;
 }
 
 .buzzBee{
     width: 23%;
+    position: relative;
+    margin-top: -19%;
+    margin-left: 45%;
 }
 
 .totalCounter ul li{
@@ -25,21 +31,21 @@
 
 
 #totalBees{
-    background-image: url(../images/BeeHive\ picture.jpg);
+    background-image: url(../images/theHive.png);
     background-size: contain;
     background-repeat: no-repeat;
     width:20%;
 }
 
 #totalPollen{
-    background-image: url(../images/flowers.jpg);
+    background-image: url(../images/thePollen.png);
     background-size: contain;
     background-repeat: no-repeat;
     width: 20%;
 }
 
 #totalHoney{
-    background-image: url(../images/honey.jpg);
+    background-image: url(../images/theHoney.png);
     background-size: contain;
     background-repeat: no-repeat;
     width: 20%;
@@ -47,8 +53,15 @@
 /* chatBox section END */
 
 /*queenClicker START*/
-.queenClicker{
-    background-color: royalblue;
+
+.queenClicker button{
+    border-radius: 50%;
+    background-color: transparent;
+    border-color: white;   
+    box-shadow:
+      0 0 60px 30px yellow,  /* inner white */
+      0 0 100px 60px white, /* middle magenta */
+      0 0 140px 90px transparent; /* outer cyan */
 }
 
 /* queenClicker END*/
