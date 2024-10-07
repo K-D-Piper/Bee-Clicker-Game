@@ -67,16 +67,26 @@
 /* queenClicker END*/
 
 /*beeStore START*/
+
+.beeStore h5{
+    text-align: center;
+}
+
 .beeStore{
     background-color: greenyellow;
+    text-align: center;
 }
-
+/*
 .beeStore ul li{
     list-style-type: none;
-    /*display: inline-block;*/
 }
-
+*/
 /*
+#beesAvaliable{
+    list-style-image: url(../images/Bee\ avaliable\ .jpg);
+} Note: this may need to be either deleted or consolidated later
+
+
 #beesAvaliable{
     background-image: url(../images/Bee\ avaliable\ .jpg);
     background-size: contain;
