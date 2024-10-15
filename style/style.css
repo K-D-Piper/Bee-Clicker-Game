@@ -118,6 +118,11 @@
     color: red;
 }
 
+.outside{
+    color:royalblue;
+    text-align: right;
+}
+
 /*-----------------------------------------------*/
 /* Honey Bunny Section START*/
 .all-In-One-Boss{
@@ -130,4 +135,9 @@
 
 #honeyBoss{
     width: 20%;
+}
+
+.returnToHive{
+    color: royalblue;
+    background-color: yellow;
 }

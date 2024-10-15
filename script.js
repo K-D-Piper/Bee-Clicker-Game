@@ -100,9 +100,9 @@ makeHoneyButton.addEventListener('click', () =>
  //BeeStore END
 
  /* OOOOOOOO   MAIN SECTION END   OOOOOOOOOOOOOOOOOO*/
+
  /*XXXXXXXXXXXX   BOSS SECTION START   XXXXXXXXXXXXXXX*/ 
 
-//Okay. So. The best way it seems for me to avoid a feak out is to write it out so, lets begin. How does the boss work?
 
 /* The final boss of this game will take place on a seperate HTML foulder. Here the main objective will be to fight the Honey Bunny. 
     HB works by clicking the hive. When HB clicks the hive in increases the honey. 
@@ -115,14 +115,37 @@ makeHoneyButton.addEventListener('click', () =>
 
 */
 
+
 let hiveHealthBar = document.getElementById("hiveHealthBar") //health scale
 let bossHiveButton = document.getElementById("hiveDefense") //hive button 
 
 let bunnyBossBar = document.getElementById("bunnyHealthBar") //bunny health bar
 let honeyBunnyButton = document.getElementById("honeyBoss") //Honey Bunny Button 
 
-bossHiveButton.addEventListener('click' , () => {
-    let health = 0;
-    let hiveHealthBar = "im exhagusted"
+let hiveHealth = 10;
+let hiveHoney = 5;
+
+let honeyBunnyHealth = 10;
+
+bossHiveButton.addEventListener('click' , () => 
+{
+    let hiveBoss = hiveHealth + 1;
+    let hiveHoneyCount = hiveHoney - 1;
+    hiveHealthBar = hiveBoss - hiveHoneyCount
+    let honeyBunny = honeyBunnyHealth -1;
+
+    if(hiveBoss >= hiveHoneyCount) {
+        alert("Fight The Honey Bunny")
+    } else if (hiveHoneyCount > hiveBoss){
+        alert("THE HONEY BUNNY SUNK YOUR HIVE")
+    }
+})
+
+honeyBunnyButton.addEventListener('click', () => 
+{
+    let hiveBoss = hiveHealth - 1;
+    let hiveHoneyCount = hiveHoney + 1;
+
 
 })
+

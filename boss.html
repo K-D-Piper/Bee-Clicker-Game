@@ -10,18 +10,37 @@
 <body>
     <div class="all-In-One-Boss container-fluid">
         <div class="row">
-            <div class="hiveDefender container-fluid">
+            <div class="healthBars container-fluid">
                 <div class="row">
-                    <div class="hiveHealth col-12">
+                    <div class="honeyBunnyHealth col-6">
+                        <input type="range" name="bossHealth" id="bunnyHealthBar">
+                    </div> 
+                    <div class="hiveHealth col-6">
                         <input type="range" name="hiveHealth" id="hiveHealthBar">
-                    </div> <!--healthBar END-->
-                        <button class="hiveButton col-4" id="hiveDefense"><img class="img-fluid" src="images/BeeHive picture.jpg" alt="This is your hive to defend" ></button>
+                    </div>
                 </div>
-            </div> <!--hiveDefender END-->
-            <div class="bunnyBoss container-fluid">
-                <input type="range" name="bossHealth" id="bunnyHealthBar">
-                <button id="honeyBoss"><img class="img-fluid" src="images/Honey Bunny.jpg" alt="Its a Bunny made of Honey...Attacking your hive!"></button>
-            </div> <!--bunnyBoss END-->
+            </div><!--healthBars END-->
+            <div class="theFighters container-fluid">
+                <div class="row">
+                    <div class="honeyBunnyBoss col-6">
+                        <div class="attackHB">
+                            <button id="honeyBoss">
+                                <img class="img-fluid" src="images/Honey Bunny.jpg" alt="Its a Bunny made of Honey...Attacking your hive!">
+                            </button>
+                        </div> 
+                    </div> <!--honeyBunnyBoss END-->
+                    <div class="hiveFighter col-6">
+                        <div class="defendHive">
+                        <button class="hiveButton col-4" id="hiveDefense">
+                            <img class="img-fluid" src="images/theHive.png" alt="This is your hive to defend" >
+                        </button>
+                        </div> <!--defendHive END --> 
+                    </div><!--hiveFighter END-->
+                </div>
+                <div class="returnToHive">
+                    <a href="index.html">Go Back To Hive?</a>
+                </div>
+            </div> <!--theFighters END-->
         </div> <!--all-in-one-Boss row END-->
     </div> <!--all-In-One-Boss container END-->
 </body>
