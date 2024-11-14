@@ -1,10 +1,12 @@
-// Variable Names: Total Bee Count START
+// Variable Names: 
+
+//Total Bee Count START
 let count = 0; //this is starting count 
 let queenButton = document.getElementById("clickQueen") //The Queen Button
 let totalBees = document.getElementById("totalDisplay") //Total Bees post clicks
 //Total Bee Count END
 
-//Variable Names : Bee Store START
+//Bee Store START+++++++++
 //Bees Avaliable Count START
 let avaliableCount = 0;
 let beesAvaliable = document.getElementById("avaliableDisplay")
@@ -31,7 +33,7 @@ let honeyBeeCount = 0;
 let makeHoneyButton = document.getElementById("orderMakeHoney")
 let makeHoneyDisplay = document.getElementById("beesHoneying")
 //Honey END
-//Bee Store Names END
+//Bee Store END +++++++++++
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //MY QUEEN (the everything Button) START
@@ -100,6 +102,32 @@ makeHoneyButton.addEventListener('click', () =>
  //BeeStore END
 
  /* OOOOOOOO   MAIN SECTION END   OOOOOOOOOOOOOOOOOO*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
  /*XXXXXXXXXXXX   BOSS SECTION START   XXXXXXXXXXXXXXX*/ 
 
