@@ -129,15 +129,27 @@
     background-color: green;
 }
 
+/* Health Bars START */
+
+.honeyBunnyHealth input{
+    width: 10px;
+}
+
+/* Health Bar END */
+
+.honeyBunnyBoss{
+    padding-top: 39%;
+}
+
+.returnToHive{
+    color: royalblue;
+    background-color: yellow;
+}
+
 #hiveDefense{
     width: 20%;
 }
 
 #honeyBoss{
     width: 20%;
-}
-
-.returnToHive{
-    color: royalblue;
-    background-color: yellow;
 }

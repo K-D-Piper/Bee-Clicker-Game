@@ -102,72 +102,53 @@ makeHoneyButton.addEventListener('click', () =>
  //BeeStore END
 
  /* OOOOOOOO   MAIN SECTION END   OOOOOOOOOOOOOOOOOO*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
  /*XXXXXXXXXXXX   BOSS SECTION START   XXXXXXXXXXXXXXX*/ 
-
 
 /* The final boss of this game will take place on a seperate HTML foulder. Here the main objective will be to fight the Honey Bunny. 
     HB works by clicking the hive. When HB clicks the hive in increases the honey. 
-    HB's objective is to get the hive to have more bees and fall down. 
+    HB's objective is to get the hive to have more honey thhan bees which will make it fall down. 
 
     HIVE's objective is to defend its hive. It can do that in 2 ways. 
         Attacking HB (by clicking HB)
         Adding Bees (by clicking hive.)
-        Consuming Honey (by clicking on the hive)
+            * Adding Bees consumes honey 
 
 */
 
-
-let hiveHealthBar = document.getElementById("hiveHealthBar") //health scale
+/*Hive Button START*/ 
 let bossHiveButton = document.getElementById("hiveDefense") //hive button 
 
-let bunnyBossBar = document.getElementById("bunnyHealthBar") //bunny health bar
+bossHiveButton.addEventListener('click' , () => 
+    {
+        let hiveBoss = hiveHealth + 1;
+        let hiveHoneyCount = hiveHoney - 1;
+        hiveHealthBar = hiveBoss - hiveHoneyCount
+        let honeyBunny = honeyBunnyHealth -1;
+    
+        if(hiveBoss >= hiveHoneyCount) {
+            alert("Fight The Honey Bunny")
+        } else if (hiveHoneyCount > hiveBoss){
+            alert("THE HONEY BUNNY SUNK YOUR HIVE")
+        }
+    })
+/*Hive Button END*/
+
+/* HB Button START*/
 let honeyBunnyButton = document.getElementById("honeyBoss") //Honey Bunny Button 
+/* HB Button END */
+
+/* Hive Health START*/
+
+let hiveHealthBar = document.getElementById("hiveHealthBar") //health scale
 
 let hiveHealth = 10;
 let hiveHoney = 5;
 
-let honeyBunnyHealth = 10;
+/* Hive Health END*/
 
-bossHiveButton.addEventListener('click' , () => 
-{
-    let hiveBoss = hiveHealth + 1;
-    let hiveHoneyCount = hiveHoney - 1;
-    hiveHealthBar = hiveBoss - hiveHoneyCount
-    let honeyBunny = honeyBunnyHealth -1;
-
-    if(hiveBoss >= hiveHoneyCount) {
-        alert("Fight The Honey Bunny")
-    } else if (hiveHoneyCount > hiveBoss){
-        alert("THE HONEY BUNNY SUNK YOUR HIVE")
-    }
-})
+/* HB Health START */
+let bunnyBossBar = document.getElementById("bunnyHealthBar") //bunny health bar
+let honeyBunnyHealth = 8;
 
 honeyBunnyButton.addEventListener('click', () => 
 {
@@ -176,4 +157,9 @@ honeyBunnyButton.addEventListener('click', () =>
 
 
 })
+
+/* HB Health END*/
+
+
+
 
