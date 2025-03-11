@@ -104,9 +104,9 @@ makeHoneyButton.addEventListener('click', () =>
  /* OOOOOOOO   MAIN SECTION END   OOOOOOOOOOOOOOOOOO*/
  /*XXXXXXXXXXXX   BOSS SECTION START   XXXXXXXXXXXXXXX*/ 
 
-/* The final boss of this game will take place on a seperate HTML foulder. Here the main objective will be to fight the Honey Bunny. 
+/* The final boss of this game will take place on a seperate HTML page. Here the main objective will be to fight the Honey Bunny Boss. 
     HB works by clicking the hive. When HB clicks the hive in increases the honey. 
-    HB's objective is to get the hive to have more honey thhan bees which will make it fall down. 
+    HB's objective is to get the hive to have all honey and no bees which will make it fall down. 
 
     HIVE's objective is to defend its hive. It can do that in 2 ways. 
         Attacking HB (by clicking HB)
@@ -114,6 +114,8 @@ makeHoneyButton.addEventListener('click', () =>
             * Adding Bees consumes honey 
 
 */
+/* Hive Section START*/
+
 
 /*Hive Button START*/ 
 let bossHiveButton = document.getElementById("hiveDefense") //hive button 
@@ -133,9 +135,7 @@ bossHiveButton.addEventListener('click' , () =>
     })
 /*Hive Button END*/
 
-/* HB Button START*/
-let honeyBunnyButton = document.getElementById("honeyBoss") //Honey Bunny Button 
-/* HB Button END */
+
 
 /* Hive Health START*/
 
@@ -146,6 +146,13 @@ let hiveHoney = 5;
 
 /* Hive Health END*/
 
+        /* Hive Section END*/
+
+
+/* Honey Bunny Section START*/
+/* HB Button START*/
+let honeyBunnyButton = document.getElementById("honeyBoss") //Honey Bunny Button 
+/* HB Button END */
 /* HB Health START */
 let bunnyBossBar = document.getElementById("bunnyHealthBar") //bunny health bar
 let honeyBunnyHealth = 8;
@@ -159,7 +166,4 @@ honeyBunnyButton.addEventListener('click', () =>
 })
 
 /* HB Health END*/
-
-
-
-
+/* Honey Bunny Section END*/

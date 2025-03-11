@@ -131,13 +131,13 @@
 
 /* Health Bars START */
 
-.honeyBunnyHealth input{
+.hbHealth input{
     width: 10px;
 }
 
 /* Health Bar END */
 
-.honeyBunnyBoss{
+.hbBoss{
     padding-top: 39%;
 }
 
